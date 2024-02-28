@@ -17,9 +17,10 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("\(place)님 안녕하세요")
             Text("\(place)님의 포인트는 300원 이에요")
+            Text(place) 
             Text(place)
             Text(place)
-            Text(place)
+            Text("push test")
         }
         .padding()
     }
