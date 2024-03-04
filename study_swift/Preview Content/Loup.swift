@@ -9,7 +9,12 @@ import SwiftUI
 
 struct Loup: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let names: [String] = ["바나바","사울","배드로","한나","나라","옵싸리"]
+        VStack {
+            ForEach(names, id: \.self){ item in
+                Text(item)
+            }
+        }
     }
 }
 
