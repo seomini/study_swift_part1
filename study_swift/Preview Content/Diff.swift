@@ -10,11 +10,13 @@ import SwiftUI
 struct Diff: View {
     
     let myCar = Car(name: "리어카", owner: "라이오")
-    let myKar = Kar(name:"리어카2", owner: "라이오2")
-    
+    @ObservedObject var myKar = Kar(name:"리어카2", owner: "라이오2")
+    @State var name: String = ""
     var body: some View {
         VStack {
             Text("\(myCar.name)의 주인은 \(myCar.owner)입니다.")
+            
+            TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $name)
             
             Button {
                 
@@ -40,8 +42,8 @@ struct Car {
     }
 }
 
-class Kar {
-    var name: String
+class Kar: ObservableObject {
+    @Published var name: String
     var owner: String
     
     func sayHi(){

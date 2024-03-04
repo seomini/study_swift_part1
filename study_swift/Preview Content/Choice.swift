@@ -28,7 +28,6 @@ enum Menu {
     case pasta
     case pizza
     case stake(String)
-
 }
 
 
@@ -38,6 +37,7 @@ enum Direction: String {
     case east = "동"
     case south = "남"
 }
+
 #Preview {
     Choice()
 }
